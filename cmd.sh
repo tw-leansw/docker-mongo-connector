@@ -1,0 +1,1 @@
+mongo-connector --auto-commit-interval=0  --verbose -n deliflow-code-metrics-dockerv2.codeMetric,deliflow-cd-metrics-docker.pipelineTriggerHistory,deliflow-cd-metrics-docker.pipelineLatestHistoryDto,deliflow-cd-metrics-docker.pipelineHistoryDto --oplog-ts=/data/oplog.ts -m mongo:27017 -t elasticsearch:9200 -d elastic2_doc_manager
