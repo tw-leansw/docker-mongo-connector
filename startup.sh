@@ -28,5 +28,7 @@ do
 done
 
 sleep 1
-
+while true;
+do
 mongo-connector --auto-commit-interval=0  --verbose --oplog-ts=/data/oplog.ts -m ${mongo}:${mongoport} -t ${elasticsearch}:${elasticport} -d elastic2_doc_manager
+done
