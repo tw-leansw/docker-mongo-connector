@@ -31,5 +31,5 @@ done
 while true;
 do
   sleep 1
-  mongo-connector --auto-commit-interval=0 -n ${NAME_SPACES} --verbose --oplog-ts=/data/oplog.ts -m ${mongo}:${mongoport} -t ${elasticsearch}:${elasticport} -d elastic2_doc_manager --stdout
+  mongo-connector --auto-commit-interval=0 -n ${NAME_SPACES} -e ${EXCLUDE_FIELDS} --verbose --oplog-ts=/data/oplog.ts -m ${mongo}:${mongoport} -t ${elasticsearch}:${elasticport} -d elastic2_doc_manager --stdout
 done
